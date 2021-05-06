@@ -6,9 +6,6 @@ from get_customer_journey import get_customer_journey
 from lifetimes import BetaGeoFitter, ModifiedBetaGeoFitter, BetaGeoBetaBinomFitter
 
 
-from werkzeug.debug import DebuggedApplication
-
-
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -25,10 +22,10 @@ def index():
     return render_template('home.html')
 
 
-data = pd.read_csv('user_profile_label.csv')
-transactions = pd.read_csv('transition_ecomm_oct_nov.csv')
+data = pd.read_csv('data/user_profile_label.csv')
+transactions = pd.read_csv('data/transition_ecomm_oct_nov.csv')
 bgf = ModifiedBetaGeoFitter(penalizer_coef=0.0)
 bgf.fit(data['frequency'], data['recency'], data['t'])
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

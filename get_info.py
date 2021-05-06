@@ -1,5 +1,3 @@
-import json
-import pandas as pd
 
 def get_info(data, id):
 
