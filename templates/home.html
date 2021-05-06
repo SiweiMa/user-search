@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/v4-shims.css">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-md-8">
+                <p class="text-secondary">From <a href="https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store?select=2019-Oct.csv">eCommerce dataset</a> in Kaggle. Please try user id in the dataset.<p>
+                <form class="form-inline" action="#" method="POST">
+                    <p><input type="text" name="id" placeholder="enter user id"/></p><p><input type="submit" name="submit"/></p>
+                </form>
+                {% if segment != null %}
+                <div class="border">
+                    <table class="table">
+                        <thead>
+                            <tr class="table-active">
+                              <th>User Information</th>
+                              <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><b>User ID</b></td>
+                            <td>{{id}}</td>
+                          </tr>
+                          <tr>
+                            <td><b>Segment</b></td>
+                            <td>{{segment}}</td>
+                          </tr>
+                          <tr>
+                            <td><b># of purchase next month</b></td>
+                            <td>{{n_purchase}}</td>
+                          </tr>
+                          <tr>
+                            <td><b>CLV for next 6 months</b></td>
+                            <td>{{clv}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <br>
+
+                <div class="border">
+                    <table class="table">
+                        <tbody>
+                          <tr class="table-active">
+                            <td><b>Customer Probability Histories</b></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    <div style="margin-left: 10%; margin-right: 10%;"><img src="data:image/png;base64,{{fig_data}}" alt="img_data"  id="imgslot" class="img-fluid"/> </img></div>
+                    <br>
+                </div>
+                <br>
+
+                <div class="border">
+                    <table class="table">
+                        <thead>
+                            <tr class="table-active">
+                              <th>Detailed Purchase Histories</th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                        <tbody>
+                          <tr>
+                            <td>Event time</td>
+                            <td>Price</td>
+                            <td>Category</td>
+                            <td>Brand</td>
+                          </tr>
+                          {% for i in history %}
+                          <tr>
+                            <td>{{i[0]}}</td>
+                            <td>{{i[1]}}</td>
+                            <td>{{i[2]}}</td>
+                            <td>{{i[3]}}</td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+
+                </div>
+
+            </div>       
+        </div>
+     </div>
+    {% endif %}
+</body>
+</html>

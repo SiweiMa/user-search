@@ -1,0 +1,29 @@
+img {
+    width: 60%;
+  }
+
+html,body {
+height: 100%;
+}
+
+.full-page{       
+    height: 100vh;       
+    width: 100vw;     
+}
+
+/* .imgsize{
+    width: 1%;
+    height: 1%;
+} */
+
+/* .div {
+  padding: 10px;
+} */
+/* 
+.text {
+  background-color: #F1F1F1;
+  width: 600px;
+  margin: auto;
+  border: 1px solid #73AD21;
+  padding: 15px;
+  } */
