@@ -6,7 +6,7 @@
 <p align="center">Figure. Screencapture of the user profile searching tool.</p>
 
 # 1. Data Summary
-The data of this project came from [eCommerce behavior dataset] (https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store?select=2019-Oct.csv) in Kaggle.
+The data of this project came from [eCommerce behavior dataset](https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store?select=2019-Oct.csv) in Kaggle.
 
 # 2. Executive Summary
 The tool aims to help people, especially those who deal directly with customers, to know their customers faster and better. The tool provides the information such as the customer's segement/clustering, CLV, conditional expected number of purchase for next month, the probability of customer of being alive, detailed purchase history. 
