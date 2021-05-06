@@ -15,9 +15,12 @@ The tool aims to help people, especially those who deal directly with customers,
 ## Data preprocessing
 The raw data (13.67 GB) includes 100 million event records. The user in this project was described in three dimensions: recency, frequency, and monetary (RFM). These information was calculated and queried by SQL. Just like the other metrics, there are quite a few ways to calculate them. In this project, I used the following defination:
 
-recency: the duration between customer's first and last purchase
-frequency: the count of repeated purchases. If the customer made several purchases in one day, we consider it as one purchase
-monetary: the sum of repeated purchases for each day dived by the total days when purchases occurred.
+```recency```: the duration between customer's first and last purchase
+
+```frequency```: the count of repeated purchases. If the customer made several purchases in one day, we consider it as one purchase
+
+```monetary```: the sum of repeated purchases for each day dived by the total days when purchases occurred
+
 
 ## User segmentation
 I clustered the customers based on RFM information. There are several clustering algorithms used: k-means/k-means++, random forest clustering and spectral clustering. As for k-means/k-means++, random forest clustering algorithms, they were implemented by Python from scratch. As the part of these code is from homework and I am not allowed to publish them in public - please contact me if you are interested.
