@@ -5,5 +5,7 @@
 The data of this project came from [Kaggle](https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store?select=2019-Oct.csv). 
 
 ![](screencapture-web.png)
+<p align="center">> Figure 1. Predictors with missing value by percentage.</p>
 
-> Figure 1. Predictors with missing value by percentage.
+
+
