@@ -5,13 +5,13 @@
 ![](screencapture-web.png)
 <p align="center">Figure. Screencapture of the user profile searching tool.</p>
 
-# Data Summary
+# 1. Data Summary
 The data of this project came from [eCommerce behavior dataset] (https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store?select=2019-Oct.csv) in Kaggle.
 
-# Executive Summary
+# 2. Executive Summary
 The tool aims to help people, especially those who deal directly with customers, to know their customers faster and better. The tool provides the information such as the customer's segement/clustering, CLV, conditional expected number of purchase for next month, the probability of customer of being alive, detailed purchase history. 
 
-# Process
+# 3. Analysis Process
 ## Data preprocessing
 The raw data (13.67 GB) includes 100 million event records. The user in this project was described in three dimensions: recency, frequency, and monetary (RFM). These information was calculated and queried by SQL. Just like the other metrics, there are quite a few ways to calculate them. In this project, I used the following defination:
 
@@ -29,7 +29,7 @@ The number of transitions is calculated by BG/NBD model. BG/NBD is a probabilist
 
 The awesome package [lifetimes](https://lifetimes.readthedocs.io/en/latest/) was used for the above calculations. 
 
-# Web App
+# 4. Web App
 The web application was made using Flask and deployed to Heroku.
 
 
