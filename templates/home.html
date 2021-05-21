@@ -12,10 +12,11 @@
     <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-md-8">
-                <p class="text-secondary">Data is from <a href="https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store?select=2019-Oct.csv">eCommerce dataset</a> in Kaggle. Please try user id in the dataset.<p>
-                <p class="text-secondary">For example, you can use the user ID to take a try: 512411061, 512437594, 566270177</p>
+                <p class="text-secondary">Data is from <a href="https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store?select=2019-Oct.csv">eCommerce dataset</a> in Kaggle.<p>
+                <p class="text-secondary">For ease of use, the user ID was mapped to index ranging from 0 to 347117.</p>
+                <p class="text-secondary">For example, you can start with index, such as 1201, 2151, 3063...</p>
                 <form class="form-inline" action="#" method="POST">
-                    <p><input type="text" name="id" placeholder="enter user id"/></p><p><input type="submit" name="submit"/></p>
+                    <p><input type="text" name="id" placeholder="enter index"/></p><p><input type="submit" name="submit"/></p>
                 </form>
                 {% if segment != null %}
                 <div class="border">
@@ -95,5 +96,6 @@
         </div>
      </div>
     {% endif %}
+
 </body>
 </html>
